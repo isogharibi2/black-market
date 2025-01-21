@@ -1,0 +1,22 @@
+@use "/src/sass/base/colors";
+@use "/src/sass/base/fonts";
+
+input {
+  background-color: colors.$neutral-20;
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: 0.5rem;
+  color: colors.$primary;
+  padding: 0.8125rem 1rem;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  color: colors.$neutral-40;
+}
+
+input:focus,
+input:focus-visible {
+  outline: none;
+}

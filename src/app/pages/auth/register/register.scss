@@ -1,0 +1,59 @@
+@use "/src/sass/base/colors";
+@use "/src/sass/base/fonts";
+@use "/src/sass/utils/mixins" as *;
+
+.wrapper {
+  @include flex();
+  width: 100%;
+  height: 100dvh;
+
+  .model {
+    width: 60%;
+    height: 100%;
+    overflow: hidden;
+
+    img {
+      width: 1024px;
+      height: 1024px;
+    }
+  }
+
+  form {
+    @include flex(column, center, center);
+    width: 40%;
+    height: 100%;
+    background-color: colors.$white;
+    margin-right: auto;
+
+    h3 {
+      font-family: fonts.$en;
+      font-size: 2rem;
+      font-weight: 300;
+    }
+
+    .details {
+      @include flex(column, center, center);
+      width: 400px;
+      height: max-content;
+      gap: 1rem;
+      margin: 3rem;
+
+      button[type="submit"] {
+        background-color: colors.$primary;
+        color: colors.$white;
+        font-family: fonts.$medium;
+        font-size: 1.125rem;
+        width: 100%;
+        height: 48px;
+        border: none;
+        border-radius: 0.5rem;
+        margin-top: 1.8rem;
+      }
+    }
+
+    a {
+      color: colors.$primary;
+      border-bottom: 2px solid colors.$neutral-30;
+    }
+  }
+}

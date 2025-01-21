@@ -1,0 +1,45 @@
+@use "/src/sass/base/colors";
+@use "/src/sass/base/fonts";
+@use "/src/sass/utils/mixins" as *;
+
+nav {
+  @include flex();
+  @include padding(0, 24px);
+  height: 2.375rem;
+  background-color: colors.$neutral-20;
+
+  ul {
+    @include flex(row, center, center);
+    margin-left: auto;
+    gap: 1.5rem;
+
+    a {
+      font-size: 16px;
+      color: colors.$primary;
+    }
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    border-right: 0.1875rem solid colors.$white;
+    border-left: 0.1875rem solid colors.$white;
+    width: 7rem;
+    height: 100%;
+
+    .indicator {
+      @include flex(row, center, center);
+      background-color: colors.$primary;
+      color: colors.$white;
+      font-size: 0.9rem;
+      padding: 0.1rem 0.35rem;
+      border-radius: 4px;
+    }
+
+    &.cart {
+      @include flex(row-reverse, center, center);
+      border-left: none;
+      gap: 4px;
+    }
+  }
+}

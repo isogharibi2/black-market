@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "aesthetiva";
+  src: url("/src/app/fonts/aesthetiva.ttf");
+}
+@font-face {
+  font-family: "peyda-thin";
+  src: url("/src/app/fonts/peyda-thin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "peyda-extra-light";
+  src: url("/src/app/fonts/peyda-extra-light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "peyda-light";
+  src: url("/src/app/fonts/peyda-light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "peyda-regular";
+  src: url("/src/app/fonts/peyda-regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "peyda-medium";
+  src: url("/src/app/fonts/peyda-medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "peyda-semi-bold";
+  src: url("/src/app/fonts/peyda-semi-bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "peyda-bold";
+  src: url("/src/app/fonts/peyda-bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "peyda-extra-bold";
+  src: url("/src/app/fonts/peyda-extra-bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "peyda-black";
+  src: url("/src/app/fonts/peyda-black.woff2") format("woff2");
+}
+:root {
+  direction: rtl;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "peyda-regular";
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=main.css.map */
