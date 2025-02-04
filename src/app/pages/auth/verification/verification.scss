@@ -1,0 +1,134 @@
+@use "/src/sass/base/colors";
+@use "/src/sass/base/fonts";
+@use "/src/sass/utils/mixins" as *;
+
+// .box-container {
+//   display: flex;
+//   flex-direction: row-reverse;
+//   gap: 1rem;
+//   width: 300px;
+
+//   .numbers {
+//     text-align: center;
+//     font-family: fonts.$medium;
+//     font-size: 2rem;
+//     width: 64px;
+//     height: 64px;
+//     // padding: 0;
+//   }
+// }
+
+// .details {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   width: 100%;
+//   height: max-content;
+//   gap: 1rem;
+//   margin: 0;
+
+//   button[type="submit"] {
+//     background-color: colors.$primary;
+//     color: colors.$white;
+//     font-family: fonts.$medium;
+//     font-size: 1.125rem;
+//     width: 100%;
+//     height: 48px;
+//     border: none;
+//     border-radius: 0.5rem;
+//     margin-top: 1.8rem;
+//   }
+// }
+
+.wrapper {
+  @include flex();
+  width: 100%;
+  height: 100dvh;
+
+  .row {
+    @include flex(row, space-between, center);
+    width: 100%;
+    margin-top: 1.875rem;
+  }
+
+  .model {
+    width: 60%;
+    height: 100%;
+    overflow: hidden;
+
+    img {
+      width: 1024px;
+      height: 1024px;
+    }
+  }
+
+  form {
+    @include flex(column, center, center);
+    width: 40%;
+    height: 100%;
+    background-color: colors.$white;
+    margin-right: auto;
+
+    .countdown {
+      font-family: fonts.$medium;
+      color: colors.$neutral-40;
+      border-bottom: 2px solid colors.$neutral-20;
+    }
+
+    h3 {
+      font-family: fonts.$en;
+      font-size: 2rem;
+      font-weight: 300;
+    }
+
+    .details {
+      @include flex(column, center, center);
+      width: 400px;
+      height: max-content;
+      gap: 1rem;
+      margin: 3rem;
+
+      .box-container {
+        @include flex(row-reverse, center, center);
+        gap: 10px;
+      }
+
+      .numbers {
+        width: 64px;
+        height: 64px;
+        background-color: colors.$neutral-20;
+        border-radius: 0.5rem;
+        color: colors.$primary;
+        font-family: fonts.$bold;
+        font-size: 2.3rem;
+        outline: none;
+        border: none;
+        text-align: center;
+        // caret-color: transparent;
+      }
+
+      .numbers:focus,
+      .numbers:focus-visible {
+        border: 2px solid colors.$info;
+      }
+
+      button[type="submit"] {
+        background-color: colors.$primary;
+        color: colors.$white;
+        font-family: fonts.$medium;
+        font-size: 1.125rem;
+        width: 100%;
+        height: 48px;
+        border: none;
+        border-radius: 0.5rem;
+        margin-top: 1.8rem;
+      }
+    }
+
+    a {
+      color: colors.$primary;
+      border-bottom: 2px solid colors.$neutral-30;
+    }
+  }
+}

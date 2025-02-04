@@ -51,6 +51,10 @@
   font-family: "peyda-regular";
 }
 
+input {
+  padding: 0;
+}
+
 ul {
   list-style: none;
 }

@@ -6,6 +6,7 @@ import Home from "@pages/home";
 import NotFound from "@app/pages/404";
 import Register from "@pages/auth/register";
 import Login from "@app/pages/auth/login";
+import Verification from "@app/pages/auth/verification/index"
 
 function App() {
   const location = useLocation();
@@ -15,6 +16,7 @@ function App() {
     "/auth/login",
     "/auth/verify",
     "/auth/forget-password",
+    "/auth/verification",
   ];
   const hideNav = notAllowed.includes(location.pathname);
 
@@ -26,6 +28,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
         <Route path="/auth/register" element={<Register />} />
         <Route path="/auth/login" element={<Login />} />
+        <Route path="/auth/verification" element={<Verification />}/>
       </Routes>
     </>
   );

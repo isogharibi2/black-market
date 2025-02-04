@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "./login.scss";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import Input from "@ui/components/input";
 import { AuthenticationContext } from "@app/context/AuthenticationContext";
@@ -11,6 +11,7 @@ import { Bounce, toast, ToastContainer } from "react-toastify";
 
 export default function Login() {
   const { loginUsername, loginPassword } = useContext(AuthenticationContext);
+  const Navigate = useNavigate()
 
   const loginUser = async (e) => {
     e.preventDefault();
@@ -31,7 +32,10 @@ export default function Login() {
           progress: undefined,
           theme: "light",
           transition: Bounce,
+          onClose :  () => Navigate("/auth/verification") 
         });
+        localStorage.setItem("verified", true);
+        localStorage.setItem("email" , user.email)
       } else {
         toast.error("your username or password is not true", {
           position: "top-right",

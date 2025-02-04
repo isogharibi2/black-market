@@ -1,36 +1,63 @@
 import React, { useContext } from "react";
 import "./register.scss";
 
-import { Link } from "react-router-dom";
-import Input from "@app/ui/components/input";
-
-import { AuthenticationContext } from "@app/context/AuthenticationContext";
-import { baseUrl } from "@app/helpers/variables";
 import axios from "axios";
-
 import { useMutation } from "@tanstack/react-query";
 
+import { AuthenticationContext } from "@app/context/AuthenticationContext";
+
+import { Link , useNavigate } from "react-router-dom";
+import Input from "@app/ui/components/input";
+
 export default function Register() {
-  const { username, email , password , confirmPassword } = useContext(AuthenticationContext);
+  const { username , email , password } = useContext(AuthenticationContext);
+  const Navigate = useNavigate()
 
-  const formType = "register";
+  const formInputs = [
+    {
+      id: 0,
+      type: "text",
+      placeholder: "نام کاربری",
+    },
 
-  const registerUser = async (e) => {
-    e.preventDefault();
+    {
+      id: 1,
+      type: "text",
+      placeholder: "شماره موبایل",
+    },
+
+    {
+      id: 2,
+      type: "password",
+      placeholder: "رمز عبور",
+    },
+    {
+      id: 3,
+      type: "password",
+      placeholder: "تکرار رمز عبور",
+    },
+  ];
+
+  const registerUser = async (event) => {
+    event.preventDefault();
+
     try {
-      const response = await axios.post(`${baseUrl}/register` , {
-        username : username , 
-        email : email ,
-        password : password , 
-        confirmPassword : confirmPassword
+      const response = await axios.post("http://localhost:3001/register", {
+        username ,
+        email,
+        password
       });
-      console.log(response);
+      console.log(response.data);
+      Navigate("/auth/login")
     } catch (error) {
-      console.error(error.message);
+      console.log(error.message);
     }
+
+
   };
 
   const { mutate: register } = useMutation({
+    mutationKey: ["register"],
     mutationFn: registerUser,
   });
 
@@ -42,7 +69,7 @@ export default function Register() {
       <form onSubmit={register}>
         <h3> BLACK DARK </h3>
         <div className="details">
-          <Input formType={formType} />
+          {<Input formType={"register"} />}
           <button type="submit">ثبت نام</button>
         </div>
         <Link to="/auth/login"> حساب کاربری دارید؟ ورود </Link>
