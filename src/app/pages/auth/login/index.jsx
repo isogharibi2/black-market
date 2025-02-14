@@ -36,6 +36,8 @@ export default function Login() {
         });
         localStorage.setItem("verified", true);
         localStorage.setItem("email" , user.email)
+        localStorage.setItem("username" , user.username)
+        localStorage.setItem("password" , user.password)
       } else {
         toast.error("your username or password is not true", {
           position: "top-right",
