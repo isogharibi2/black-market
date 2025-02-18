@@ -1,2 +1,144 @@
 @use "/src/sass/utils/mixins.scss" as *;
-@use "/src/sass/base/fonts";
+@use "/src/sass/base/fonts" as *;
+
+.Hero-container {
+  margin: 3rem auto;
+  overflow-x: hidden;
+
+  .men-women-clothes {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 29rem;
+  }
+
+  .men-clothes {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0 2rem;
+    position: relative;
+
+    .multi-p {
+      width: 795px;
+      height: 92px;
+      position: relative;
+      z-index: 100;
+
+      .p-p1 {
+        position: absolute;
+        font-size: 90px;
+        bottom: -200px;
+        right: 239px;
+        font-family: $en;
+        width: max-content;
+        color: #1a1a1a3d;
+      }
+
+      .p-p2 {
+        position: absolute;
+        font-size: 110px;
+        bottom: -210px;
+        left: 480px;
+        font-family: $en;
+        width: 100%;
+        color: #1a1a1a3d;
+      }
+    }
+  }
+
+  .men-clothes-p1 {
+    background-color: #c9c9c9;
+    width: 31.25rem;
+    height: 20rem;
+    border-radius: 1rem 1rem 0 1rem;
+  }
+
+  .men-clothes-p2 {
+    background-color: #c9c9c9;
+    width: 500px;
+    height: 155px;
+    position: absolute;
+    bottom: 0;
+    left: 31.2rem;
+    border-radius: 0 1rem 1rem 0;
+  }
+
+  .women-clothes {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0 2rem;
+    position: relative;
+  }
+
+  .women-clothes-p1 {
+    background-color: #B5B9B8;
+    width: 31.25rem;
+    height: 20rem;
+    border-radius: 0 1rem 1rem 1rem;
+    position: relative;
+  }
+
+  .women-clothes-p2 {
+    background-color: #B5B9B8;
+    width: 500px;
+    height: 155px;
+    position: absolute;
+    top: 0;
+    right: 31.2rem;
+    border-radius: 1rem 0 0 1rem;
+  }
+
+  .women-img {
+    position: absolute;
+    right: 250px;
+  }
+
+  .men-img {
+    position: absolute;
+    left: 250px;
+    width: 225px;
+  }
+}
+
+.Arrow-right-up {
+  background-image: url(/public/assets/icons/Arrows/Arrow-Right-Up.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 3rem;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  position: absolute;
+  background-color: #171717;
+  padding: 3.9rem 7.5rem 3rem 3.3rem;
+  width: 152px;
+  height: 96px;
+  bottom: 3px;
+  right: 2.2rem;
+  border-radius: 24px;
+}
+
+.first-model {
+  position: relative;
+}
+
+.Hero-model {
+  background-color: #171717;
+  width: 95%;
+  height: 531px;
+  border-radius: 1rem 0 0 1rem;
+}
+
+.hero-img {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 96%;
+  margin: 3rem auto;
+
+  img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    object-position: center right;
+    border-radius: 0 1rem 1rem 0;
+  }
+}

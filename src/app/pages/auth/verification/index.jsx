@@ -159,12 +159,14 @@ export default function Verification() {
           </div>
         ) : (
           <div>
-            <input
-              onInput={(e) => SetedittedEmail(e.target.value)}
-              type="email"
-              placeholder="ایمیل جدید خود را وارد کنید !ّ"
-            />
-            <button type="button" onClick={functionEditEmail}>
+            <div className="box-container">
+              <input
+                onInput={(e) => SetedittedEmail(e.target.value)}
+                type="email"
+                placeholder="ایمیل جدید خود را وارد کنید !ّ"
+              />
+            </div>
+            <button className="Edit-email-button" type="button" onClick={functionEditEmail}>
               {" "}
               ویرایش ایمیل جدید
             </button>
