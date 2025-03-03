@@ -1,6 +1,8 @@
 import React from "react";
 
 import "./home.scss";
+import Product from "./components/product";
+import SpecialSale from "./layouts/special-sale";
 
 export default function Home() {
   return (
@@ -10,12 +12,16 @@ export default function Home() {
           <div className="Hero-model">
             <span className="HeroModelText">Hakopian</span>
             <span className="ClothesTxt">کت شلوار های هاکوپیان</span>
-            <span className="ClothesLink">انواع کت شلوار های مردانه و زنانه در بلک دارک</span>
-            <div className="ClothesArrowLink">
-
-            </div>
+            <span className="ClothesLink">
+              انواع کت شلوار های مردانه و زنانه در بلک دارک
+            </span>
+            <div className="ClothesArrowLink"></div>
           </div>
-          <img className="img" src="/public/assets/images/hero-model.png" alt="" />
+          <img
+            className="img"
+            src="/public/assets/images/hero-model.png"
+            alt=""
+          />
         </div>
         <div className="Arrow-right-up"></div>
       </div>
@@ -23,9 +29,7 @@ export default function Home() {
         <div className="men-clothes">
           <div className="men-clothes-p1">
             <div className="MenClothesTxt">
-              <div className="MenClothesTxtLink">
-
-              </div>
+              <div className="MenClothesTxtLink"></div>
               <span className="PoshakMens">پـوشـاک مـردانـه</span>
             </div>
             <img
@@ -56,6 +60,10 @@ export default function Home() {
             <span className="WomenTextEnd">LOTHING</span>
           </div>
         </div>
+      </div>
+      <div className="SpecialSales">
+        <h1>فروش ویژه فصل</h1>
+        <SpecialSale />
       </div>
     </section>
   );

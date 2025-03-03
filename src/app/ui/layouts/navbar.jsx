@@ -70,7 +70,7 @@ export default function navbar() {
 
       </nav>
       <div className="title">
-        <span>BLACK DARK</span>
+        <span className="TitleName">BLACK DARK</span>
         <ul className="ul">
           {NavbarOpt.map((Clothes) => (
             <li key={Clothes.id}>
@@ -79,7 +79,7 @@ export default function navbar() {
           ))}
         </ul>
         <div className="search">
-          <input type="search-box" />
+          <input type="search-box" placeholder="جستجو"/>
           <img src="/public/assets/icons/Vector.svg" alt="" />
         </div>
       </div>

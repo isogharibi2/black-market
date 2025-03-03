@@ -1,0 +1,17 @@
+@use "/src/sass/utils/mixins" as *;
+@use "/src/sass/base/fonts";
+
+.Off {
+  @include flex(column, center, center);
+  background-color: #1a1a1a42;
+  width: max-content;
+  height: max-content;
+  padding: 0.5rem;
+  border-radius: 4px;
+  color: white;
+
+  span {
+    font-family: fonts.$en;
+    font-size: 1rem;
+  }
+}
