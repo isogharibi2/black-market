@@ -2,10 +2,17 @@
 @use "/src/sass/base/fonts";
 @use "/src/sass/utils/mixins" as *;
 
+
+
+
 .wrapper {
   @include flex();
   width: 100%;
   height: 100dvh;
+
+  input {
+    background-color: colors.$neutral-20;
+  }
 
   .model {
     width: 60%;

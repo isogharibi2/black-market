@@ -7,14 +7,27 @@ export default function Home() {
     <section className="Hero-container">
       <div className="first-model">
         <div className="hero-img">
-          <div className="Hero-model"></div>
-          <img src="/public/assets/images/hero-model.png" alt="" />
+          <div className="Hero-model">
+            <span className="HeroModelText">Hakopian</span>
+            <span className="ClothesTxt">کت شلوار های هاکوپیان</span>
+            <span className="ClothesLink">انواع کت شلوار های مردانه و زنانه در بلک دارک</span>
+            <div className="ClothesArrowLink">
+
+            </div>
+          </div>
+          <img className="img" src="/public/assets/images/hero-model.png" alt="" />
         </div>
         <div className="Arrow-right-up"></div>
       </div>
       <div className="men-women-clothes">
         <div className="men-clothes">
           <div className="men-clothes-p1">
+            <div className="MenClothesTxt">
+              <div className="MenClothesTxtLink">
+
+              </div>
+              <span className="PoshakMens">پـوشـاک مـردانـه</span>
+            </div>
             <img
               className="men-img"
               src="/public/assets/images/man.png"
@@ -35,7 +48,13 @@ export default function Home() {
               alt=""
             />
           </div>
-          <div className="women-clothes-p2"></div>
+          <div className="women-clothes-p2">
+            <div className="WomensTexts">
+              <span className="WomenText">WOMEN'S </span>
+              <span className="WomenText-C">C</span>
+            </div>
+            <span className="WomenTextEnd">LOTHING</span>
+          </div>
         </div>
       </div>
     </section>

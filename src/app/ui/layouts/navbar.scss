@@ -2,6 +2,10 @@
 @use "/src/sass/base/fonts";
 @use "/src/sass/utils/mixins" as *;
 
+li {
+  cursor: pointer;
+}
+
 nav {
   @include flex();
   @include padding(0, 24px);
@@ -16,6 +20,7 @@ nav {
     a {
       font-size: 16px;
       color: colors.$primary;
+      text-decoration: none;
     }
   }
 
@@ -40,6 +45,29 @@ nav {
       @include flex(row-reverse, center, center);
       border-left: none;
       gap: 4px;
+    }
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  padding: 2rem 2rem 0 2rem;
+  align-items: center;
+  
+  .ul {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 40px;
+  }
+
+  .search {
+    display: flex;
+    flex-direction: row-reverse;
+
+    .search-box {
+      background-color: white;
     }
   }
 }

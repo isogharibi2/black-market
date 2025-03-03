@@ -1,8 +1,29 @@
 @use "/src/sass/utils/mixins.scss" as *;
 @use "/src/sass/base/fonts" as *;
+@use "/src/sass/base/colors" as *;
+
+.p-p1 {
+  position: absolute;
+  font-size: 90px;
+  bottom: -200px;
+  right: 239px;
+  font-family: $en;
+  width: max-content;
+  color: #1a1a1a3d;
+}
+
+.p-p2 {
+  position: absolute;
+  font-size: 110px;
+  bottom: -210px;
+  left: 480px;
+  font-family: $en;
+  width: 100%;
+  color: #1a1a1a3d;
+}
 
 .Hero-container {
-  margin: 3rem auto;
+  margin: 0 auto;
   overflow-x: hidden;
 
   .men-women-clothes {
@@ -22,26 +43,6 @@
       height: 92px;
       position: relative;
       z-index: 100;
-
-      .p-p1 {
-        position: absolute;
-        font-size: 90px;
-        bottom: -200px;
-        right: 239px;
-        font-family: $en;
-        width: max-content;
-        color: #1a1a1a3d;
-      }
-
-      .p-p2 {
-        position: absolute;
-        font-size: 110px;
-        bottom: -210px;
-        left: 480px;
-        font-family: $en;
-        width: 100%;
-        color: #1a1a1a3d;
-      }
     }
   }
 
@@ -140,5 +141,346 @@
     object-fit: cover;
     object-position: center right;
     border-radius: 0 1rem 1rem 0;
+  }
+}
+
+.HeroModelText {
+  color: white;
+  position: absolute;
+  top: 119px;
+  left: 228px;
+  font-size: 8rem;
+  font-family: $en;
+  color: rgb(95, 95, 95);
+}
+
+.ClothesTxt {
+  position: absolute;
+  color: white;
+  top: 249px;
+  left: 453px;
+  font-size: 3.01rem;
+  font-family: $regular;
+  font-weight: 600;
+}
+
+.ClothesLink {
+  position: absolute;
+  color: white;
+  top: 341px;
+  left: 515px;
+  font-size: 1.4rem;
+  font-family: $regular;
+}
+
+.ClothesArrowLink {
+  background-image: url(/public/assets/icons/Arrows/arrow-left-link.png);
+  position: absolute;
+  background-color: #e3e3e3;
+  width: 34px;
+  height: 34px;
+  top: 341px;
+  left: 455px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 0.5rem;
+}
+
+.WomenText {
+  font-size: 6rem;
+  position: absolute;
+  // left: 200px;
+  top: 2.5rem;
+  font-family: $en;
+}
+
+.WomenTextEnd {
+  position: absolute;
+  left: 54rem;
+  top: 2.5rem;
+  font-family: $en;
+  font-size: 5rem;
+}
+
+.WomensTexts {
+  display: flex;
+  font-family: $en;
+  align-items: center;
+  gap: 2rem;
+  width: 40rem;
+  position: absolute;
+  left: 50px;
+  color: #1a1a1a3d;
+  top: 0px;
+}
+
+.WomenText {
+  font-family: $en;
+  position: absolute;
+  left: 0;
+  font-size: 6.2rem;
+  top: 15px;
+  color: #1a1a1a3d;
+}
+
+.WomenText-C {
+  font-family: $en;
+  font-size: 5rem;
+  position: absolute;
+  top: 50px;
+  font-size: 6rem;
+  top: 15px;
+  color: #1a1a1a3d;
+  right: 80px;
+}
+
+.WomenTextEnd {
+  color: #1a1a1a3d;
+  font-size: 4.8rem;
+  right: -30rem;
+  font-family: $en;
+  top: 28px;
+}
+
+.MenClothesTxt {
+  position: absolute;
+  top: 5.2rem;
+  left: 4rem;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+
+  .PoshakMens {
+    font-size: 2rem;
+    position: absolute;
+    left: 2rem;
+    width: 13rem;
+    font-family: $regular;
+    font-weight: 700;
+  }
+
+  .MenClothesTxtLink {
+    background-image: url(/public/assets/images/arrow-right.png);
+    position: absolute;
+    background-color: #000000;
+    width: 34px;
+    height: 34px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .Hero-model {
+    background-color: #171717;
+    width: 95%;
+    height: 639px;
+    border-radius: 1rem 0 0 1rem;
+    position: relative;
+  }
+
+  .Arrow-right-up {
+    padding: 5rem 9.9rem 3rem 3.3rem;
+  }
+
+  input {
+    background-color: white;
+  }
+
+  .HeroModelText {
+    color: white;
+    position: absolute;
+    top: 119px;
+    left: 228px;
+    font-size: 8rem;
+    font-family: $en;
+    color: rgb(95, 95, 95);
+  }
+
+  .ClothesTxt {
+    position: absolute;
+    color: white;
+    top: 249px;
+    left: 453px;
+    font-size: 3.01rem;
+    font-family: $regular;
+    font-weight: 600;
+  }
+
+  .ClothesLink {
+    position: absolute;
+    color: white;
+    top: 341px;
+    left: 515px;
+    font-size: 1.4rem;
+    font-family: $regular;
+  }
+
+  .ClothesArrowLink {
+    background-image: url(/public/assets/icons/Arrows/arrow-left-link.png);
+    position: absolute;
+    background-color: #e3e3e3;
+    width: 34px;
+    height: 34px;
+    top: 341px;
+    left: 455px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 0.5rem;
+  }
+
+
+  .men-clothes {
+    .men-clothes-p1 {
+      background-color: #e3e3e3;
+      width: 39rem;
+      height: 25rem;
+    }
+
+    .men-clothes-p2 {
+      background-color: #e3e3e3;
+      left: 39rem;
+      width: 35rem;
+      height: 12rem;
+    }
+
+    .men-img {
+      width: 17.58rem;
+      position: absolute;
+      right: 10px;
+    }
+
+    .multi-p {
+      width: 795px;
+      height: 92px;
+      position: relative;
+      z-index: 100;
+
+      .p-p1 {
+        font-size: 7.5rem;
+        width: 200rem;
+        top: 15rem;
+        right: 18rem;
+      }
+
+      .p-p2 {
+        position: absolute;
+        font-size: 7.5rem;
+        top: 15rem;
+        left: 550px;
+      }
+    }
+  }
+
+  .Hero-container {
+    .women-clothes-p1 {
+      background-color: #e3e3e3;
+      width: 39rem;
+      left: 70px;
+      position: absolute;
+      height: 25rem;
+    }
+
+    .women-clothes-p2 {
+      background-color: #e3e3e3;
+      right: -70px;
+      width: 35rem;
+      height: 12rem;
+      display: flex;
+      gap: 0.5rem;
+
+      .WomenText {
+        font-size: 6rem;
+        position: absolute;
+        // left: 200px;
+        top: 2.5rem;
+        font-family: $en;
+      }
+
+      .WomenTextEnd {
+        position: absolute;
+        left: 54rem;
+        top: 2.5rem;
+        font-family: $en;
+        font-size: 5rem;
+      }
+
+      .WomensTexts {
+        display: flex;
+        font-family: $en;
+        align-items: center;
+        gap: 2rem;
+        width: 40rem;
+        position: absolute;
+        left: 50px;
+        color: #1a1a1a3d;
+        top: 0px;
+      }
+
+      .WomenText {
+        font-family: $en;
+        position: absolute;
+        left: 0;
+        font-size: 7.5rem;
+        top: 15px;
+        color: #1a1a1a3d;
+      }
+
+      .WomenText-C {
+        font-family: $en;
+        font-size: 5rem;
+        position: absolute;
+        top: 50px;
+        font-size: 7.5rem;
+        top: 15px;
+        color: #1a1a1a3d;
+        right: 10px;
+      }
+
+      .WomenTextEnd {
+        color: #1a1a1a3d;
+        font-size: 6.4rem;
+        right: -38rem;
+        font-family: $en;
+        top: 28px;
+      }
+    }
+
+    .women-img {
+      width: 16.7rem;
+      position: absolute;
+      right: 20.8rem;
+    }
+  }
+
+  .MenClothesTxt {
+    position: absolute;
+    top: 5.2rem;
+    left: 4rem;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    .PoshakMens {
+      font-size: 2rem;
+      position: absolute;
+      left: 2rem;
+      width: 15rem;
+      font-family: $regular;
+      font-weight: 700;
+      font-size: 2.2rem;
+    }
+
+    .MenClothesTxtLink {
+      background-image: url(/public/assets/images/arrow-right.png);
+      position: absolute;
+      background-color: #000000;
+      width: 40px;
+      height: 40px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      border-radius: 0.5rem;
+    }
   }
 }

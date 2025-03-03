@@ -6,3 +6,10 @@
   @include flex(row, space-between, center);
   width: 100%;
 }
+
+.wrapper {
+
+  input {
+    background-color: colors.$neutral-20;
+  }
+}

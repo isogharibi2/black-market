@@ -20,23 +20,69 @@ export default function navbar() {
       title: "وبلاگ",
       url: "/blog",
     },
+    {
+      id: 2,
+      title: "وبلاگ",
+      url: "/blog",
+    },
   ];
 
-  return (
-    <nav>
-      <ul>
-        {links.map((link) => (
-          <li key={link.id}>
-            <Link to={link.url}> {link.title} </Link>
-          </li>
-        ))}
-      </ul>
+  const NavbarOpt = [
+    {
+      id: 1,
+      title: "کاپشن",
+    }, {
+      id: 2,
+      title: "ژاکت",
+    }, {
+      id: 3,
+      title: "کت و شلوار",
+    }, {
+      id: 4,
+      title: "شلوار",
+    }, {
+      id: 5,
+      title: "تیشرت",
+    }, {
+      id: 5,
+      title: "پیراهن",
+    },
+  ]
 
-      <button className="cart">
-        سبد خرید
-        <div className="indicator">2</div>
-      </button>
-      <button className="profile-me">پروفایل من</button>
-    </nav>
+
+  return (
+    <section>
+      <nav>
+        <ul>
+          {links.map((link) => (
+            <li key={link.id}>
+              <li to={link.url}> {link.title} </li>
+            </li>
+          ))}
+        </ul>
+
+        <button className="cart">
+          سبد خرید
+          <div className="indicator">2</div>
+        </button>
+        <button className="profile-me">پروفایل من</button>
+
+
+      </nav>
+      <div className="title">
+        <span>BLACK DARK</span>
+        <ul className="ul">
+          {NavbarOpt.map((Clothes) => (
+            <li key={Clothes.id}>
+              <li to={Clothes.url}> {Clothes.title} </li>
+            </li>
+          ))}
+        </ul>
+        <div className="search">
+          <input type="search-box" />
+          <img src="/public/assets/icons/Vector.svg" alt="" />
+        </div>
+      </div>
+    </section>
   );
 }
