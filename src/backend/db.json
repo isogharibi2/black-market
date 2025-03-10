@@ -4,7 +4,67 @@
       "id": "5ddc",
       "username": "rezaa",
       "email": "",
-      "password": "test"
+      "password": "test",
+      "admin": true
+    },
+    {
+      "id": "f29d",
+      "username": "mmad",
+      "email": "",
+      "password": "test",
+      "admin": false
+    }
+  ],
+  "specail-offers": [
+    {
+      "id": "90639",
+      "slug": "Burberry",
+      "title": "کت بربری Burberry مدل A8 ",
+      "OgPrice": "1,416,000",
+      "FinalPrice": "1,916,000",
+      "image": "/assets/images/model1.png",
+      "offer": 50,
+      "address": "/products/specail-offers/Burberry"
+    },
+    {
+      "id": "20893",
+      "slug": "Brooks",
+      "title": "کت شلوار  بروکس Brooks",
+      "OgPrice": "1,416,000",
+      "FinalPrice": "1,916,000",
+      "image": "/assets/images/model2.png",
+      "offer": 40,
+      "address": "/products/specail-offers/Burberry"
+    },
+    {
+      "id": "72800",
+      "slug": "Canali",
+      "title": "کت شلوارکانالی 320 Canali",
+      "OgPrice": "1,416,000",
+      "FinalPrice": "1,916,000",
+      "image": "/assets/images/model3.png",
+      "offer": 30,
+      "address": "/products/specail-offers/Burberry"
+    },
+    {
+      "id": "72800",
+      "slug": "SP-Italy",
+      "title": "کت زنانه اس پی ایتالیا SP-Italy",
+      "OgPrice": "1,416,000",
+      "FinalPrice": "1,916,000",
+      "image": "/assets/images/model4.png",
+      "offer": 20,
+      "address": "/products/specail-offers/Burberry"
+    },
+    {
+      "id": "72800",
+      "slug": "vstay",
+      "title": "کت چرمی بلک مدل وسطای vstay",
+      "OgPrice": "1,416,000",
+      "FinalPrice": "1,916,000",
+      "image": "/assets/images/model5.png",
+      "offer": 10,
+      "address": "کت چرمی بلک مدل وسطای vstay"
     }
   ]
 }

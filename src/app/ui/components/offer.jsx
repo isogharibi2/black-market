@@ -1,11 +1,11 @@
-import React from 'react'
-import "./offer.scss"
+import React from "react";
+import "./offer.scss";
 
-export default function Offer() {
+export default function Offer({ OfferValue }) {
   return (
-    <div className='Off'>
-        <span>Off</span>
-        <span>10%</span>
+    <div className="Off">
+      <span>Off</span>
+      <span>{OfferValue}</span>
     </div>
-  )
+  );
 }

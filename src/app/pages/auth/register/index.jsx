@@ -6,12 +6,12 @@ import { useMutation } from "@tanstack/react-query";
 
 import { AuthenticationContext } from "@app/context/AuthenticationContext";
 
-import { Link , useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Input from "@app/ui/components/input";
 
 export default function Register() {
-  const { username , email , password } = useContext(AuthenticationContext);
-  const Navigate = useNavigate()
+  const { username, email, password } = useContext(AuthenticationContext);
+  const Navigate = useNavigate();
 
   const formInputs = [
     {
@@ -43,17 +43,16 @@ export default function Register() {
 
     try {
       const response = await axios.post("http://localhost:3001/register", {
-        username ,
+        username,
         email,
-        password
+        password,
+        admin: false,
       });
       console.log(response.data);
-      Navigate("/auth/login")
+      Navigate("/auth/login");
     } catch (error) {
       console.log(error.message);
     }
-
-
   };
 
   const { mutate: register } = useMutation({

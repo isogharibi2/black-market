@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./special-sale.scss"
+import "./special-sale.scss";
 
 import Model1 from "/assets/images/model1.png";
 import Model2 from "/assets/images/model2.png";
@@ -17,6 +17,8 @@ export default function SpecialSale() {
       OgPrice: "1,416,000",
       FinalPrice: "1,916,000",
       image: Model1,
+      address: "/products/special-offers/Burberry",
+      OfferValue : "50%"
     },
     {
       id: 2,
@@ -24,6 +26,8 @@ export default function SpecialSale() {
       OgPrice: "1,416,000",
       FinalPrice: "1,916,000",
       image: Model2,
+      address: "/products/special-offers/Brooks",
+      OfferValue : "40%"
     },
     {
       id: 3,
@@ -31,13 +35,18 @@ export default function SpecialSale() {
       OgPrice: "1,416,000",
       FinalPrice: "1,916,000",
       image: Model3,
+      address: "/products/special-offers/Canali",
+      OfferValue : "30%"
     },
     {
       id: 4,
-      name: "کت زنانه اس پی ایتالیا SP Italy",
+      name: "کت زنانه اس پی ایتالیا SP-Italy",
       OgPrice: "1,416,000",
       FinalPrice: "1,916,000",
       image: Model4,
+      address: "/products/special-offers/SP-Italy",
+      OfferValue : "20%"
+
     },
     {
       id: 5,
@@ -45,6 +54,8 @@ export default function SpecialSale() {
       OgPrice: "1,416,000",
       FinalPrice: "1,916,000",
       image: Model5,
+      address: "/products/special-offers/vstay",
+      OfferValue : "10%"
     },
   ]);
   return (
@@ -55,7 +66,9 @@ export default function SpecialSale() {
           image={products.image}
           name={products.name}
           OgPrice={products.OgPrice}
+          address={products.address}
           FinalPrice={products.FinalPrice}
+          OfferValue={products.OfferValue}
         />
       ))}
     </div>

@@ -55,6 +55,7 @@ export default function Verification() {
   const [values, setValues] = useState(["", "", "", "", ""]); // Track values of each input
   const inputRefs = useRef([]); // Store refs for each input element
   const [code, setcode] = useState(Math.floor(Math.random() * 99999) + 1000);
+  localStorage.setItem("code", code);
 
   const handleChange = (e, index) => {
     const value = e.target.value;
@@ -112,17 +113,52 @@ export default function Verification() {
     }
   };
 
+  const Navigated = useNavigate();
+
   const checkcode = (e) => {
-    e.preventdefault();
+    e.preventDefault();
 
     let enteredCode = localStorage.getItem("code");
 
     if (enteredCode == code) {
       alert("Verfication was seccesfully");
+      Navigated("/profile/user");
     } else {
       alert("error");
     }
+
+    const AdminCheck = async () => {
+      try {
+        const GetTheUsers = await axios.get(`${baseUrl}/register`);
+        const users = GetTheUsers.data;
+
+        const user = users.find(
+          (user) => user.username === username && user.password === password
+        );
+
+        console.log(user);
+
+        if (user) {
+          localStorage.setItem("admin", user.admin);
+
+          if (user.admin) {
+            Navigate("/profile/admin");
+          } else {
+            Navigate("/profile/user");
+          }
+        } else {
+          alert("false");
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    AdminCheck();
   };
+
+  // if (AdminCheckState) {
+
+  // }
 
   return (
     <div className="wrapper">
@@ -166,7 +202,11 @@ export default function Verification() {
                 placeholder="ایمیل جدید خود را وارد کنید !ّ"
               />
             </div>
-            <button className="Edit-email-button" type="button" onClick={functionEditEmail}>
+            <button
+              className="Edit-email-button"
+              type="button"
+              onClick={functionEditEmail}
+            >
               {" "}
               ویرایش ایمیل جدید
             </button>
