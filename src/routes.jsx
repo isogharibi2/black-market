@@ -8,7 +8,7 @@ import Register from "@pages/auth/register";
 import Login from "@app/pages/auth/login";
 import Verification from "@app/pages/auth/verification/index";
 import SpecailOffer from "@app/pages/Products/specail-offers";
-import user from "@app/pages/profile/user";
+import User from "@app/pages/profile/user";
 import Admin from "@app/pages/profile/admin";
 
 function App() {
@@ -36,8 +36,8 @@ function App() {
           path="/products/special-offers/:slug"
           element={<SpecailOffer />}
         />
-        <Route path="/profile/user" element={user}/>
-        <Route path="/profile/admin" element={Admin}/>
+        <Route path="/profile/user" element={<User/>}/>
+        <Route path="/profile/admin/new-product" element={<Admin/>}/>
       </Routes>
     </>
   );

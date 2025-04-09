@@ -1,0 +1,11 @@
+@use "/src/sass/utils/mixins.scss" as *;
+@use "/src/sass/base/fonts" as *;
+@use "/src/sass/base/colors" as *;
+
+.HeroAdmin {
+    @include flex ( center , center , row )
+}
+
+.HeroForm {
+    @include flex ( center , space-between , row );
+}
