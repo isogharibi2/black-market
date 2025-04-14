@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./Admin.scss";
 
 export default function Admin() {
+
+  const [ imguploader , setimgupldoer ] = useState("")
+
+  const handelimgchange = (e) => {
+    const file = e;
+
+    setimgupldoer(file.name)
+  }
+
   return (
     <section className="HeroAdmin">
       <form action="" className="HeroForm">
-        <div>
+        <div className="first-filed">
           <fieldset>
             <legend>اطلاعات کلی محصولات</legend>
             <input
@@ -73,9 +82,10 @@ export default function Admin() {
             />
           </fieldset>
         </div>
-        <fieldset>
+        <fieldset className="Second-filed">
           <legend> آپلود عکس </legend>
-          <button> upload the photo </button>
+          <input type="file" onChange={(e) => handelimgchange(e.target.files[0])} />
+          {imguploader && <img src={`/assets/images/${imguploader}`} alt="imguploader" /> }
         </fieldset>
       </form>
     </section>

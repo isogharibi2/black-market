@@ -10,6 +10,7 @@ import Verification from "@app/pages/auth/verification/index";
 import SpecailOffer from "@app/pages/Products/specail-offers";
 import User from "@app/pages/profile/user";
 import Admin from "@app/pages/profile/admin";
+import Productdetlais from "@app/ui/components/productdetlais";
 
 function App() {
   const location = useLocation();
@@ -38,6 +39,7 @@ function App() {
         />
         <Route path="/profile/user" element={<User/>}/>
         <Route path="/profile/admin/new-product" element={<Admin/>}/>
+        <Route path="/products/product-details/:slug" element={ <Productdetlais />} />
       </Routes>
     </>
   );

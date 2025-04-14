@@ -142,7 +142,7 @@ export default function Verification() {
           localStorage.setItem("admin", user.admin);
 
           if (user.admin) {
-            Navigate("/profile/admin");
+            Navigate("/profile/admin/new-product");
           } else {
             Navigate("/profile/user");
           }

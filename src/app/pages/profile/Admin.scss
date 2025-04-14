@@ -3,9 +3,31 @@
 @use "/src/sass/base/colors" as *;
 
 .HeroAdmin {
-    @include flex ( center , center , row )
+    @include flex (center, center, row);
 }
 
 .HeroForm {
-    @include flex ( center , space-between , row );
+    @include flex (center, space-between, row);
+    width: 100%;
+    padding: 1.7rem;
+    gap: 1rem;
+}
+
+.first-filed {
+    width: 50%;
+
+    fieldset {
+        height: 133px;
+    }
+}
+
+.Second-filed {
+    width: 50%;
+    height: 400px;
+
+    img {
+        width: 250px;
+        height: max-content;
+    }
+
 }
