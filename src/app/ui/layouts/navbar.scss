@@ -1,10 +1,6 @@
 @use "/src/sass/base/colors";
-@use "/src/sass/base/fonts" as *;
+@use "/src/sass/base/fonts";
 @use "/src/sass/utils/mixins" as *;
-
-li {
-  cursor: pointer;
-}
 
 nav {
   @include flex();
@@ -20,7 +16,6 @@ nav {
     a {
       font-size: 16px;
       color: colors.$primary;
-      text-decoration: none;
     }
   }
 
@@ -31,6 +26,7 @@ nav {
     border-left: 0.1875rem solid colors.$white;
     width: 7rem;
     height: 100%;
+    cursor: pointer;
 
     .indicator {
       @include flex(row, center, center);
@@ -49,37 +45,45 @@ nav {
   }
 }
 
-.title {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row-reverse;
-  padding: 2rem 2rem 0 2rem;
-  align-items: center;
+.sub-nav {
+  @include flex(row, space-between, center);
+  @include padding(0, 24px);
+  margin-top: 1rem;
 
-  .TitleName {
-    font-family: $en;
+  .search-bar{
+    @include flex(row , center , center);
+    border: 1px solid #bfbfbf;
+    border-radius: 4px;
+    width: 100px;
+    height: 40px;
+    position: relative;
+
+    img{
+      width: 25px;
+      position: absolute;
+      right: 5px;
+    }
+
+    input{
+      background-color: transparent;
+      border: none;
+      outline: none;
+      width: 100%;
+      height: max-content;
+      margin-right: 1.5rem;
+    }
   }
-  
-  .ul {
-    display: flex;
-    flex-direction: row-reverse;
+
+  ul {
+    @include flex(row, center, center);
     gap: 40px;
+    width: max-content;
+    height: 100%;
   }
 
-  .search {
-    display: flex;
-    flex-direction: row-reverse;
-    border: 1.5px solid #e3e3e3;
-    padding: 0 1rem 0 1rem;
-    border-radius: 8px;
-
-    input {
-      color: #e3e3e3;
-      width: 5rem;
-    }
-
-    .search-box {
-      background-color: white;
-    }
+  h3{
+    font-family: fonts.$en;
+    font-size: 1.3rem;
+    font-weight: 300;
   }
 }

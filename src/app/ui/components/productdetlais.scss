@@ -1,3 +1,5 @@
+@use "/src/sass/base/fonts" as *;
+
 // Variables
 $primary-color: #3498db;
 $secondary-color: #2ecc71;
@@ -34,7 +36,7 @@ $transition: all 0.3s ease;
 
 // Base styles
 .product-details-container {
-  max-width: 1200px;
+  max-width: 700px;
   margin: 2rem auto;
   padding: 0 1rem;
   animation: fadeIn 0.5s ease-out;
@@ -72,6 +74,11 @@ $transition: all 0.3s ease;
     background: linear-gradient(45deg, #eee 25%, #f5f5f5 25%, #f5f5f5 50%, #eee 50%, #eee 75%, #f5f5f5 75%, #f5f5f5 100%);
     background-size: 20px 20px;
     animation: pulse 2s infinite;
+
+    img {
+      width: 300px;
+    }
+
   }
 }
 
@@ -123,6 +130,8 @@ $transition: all 0.3s ease;
       height: 40px;
       border-radius: 50%;
       background: $light-gray;
+      font-family: $en;
+      font-weight: 500;
       cursor: pointer;
       transition: $transition;
       

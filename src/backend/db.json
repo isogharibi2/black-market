@@ -35,27 +35,6 @@
       "offerPrice": "200000",
       "percentage": "20",
       "img": "model4.png",
-      "slug": "brooks"
-    },
-    {
-      "id": "bb77",
-      "title": "",
-      "enTitle": "",
-      "brand": "",
-      "sizeSM": null,
-      "sizeS": null,
-      "sizeM": null,
-      "sizeL": null,
-      "sizeXL": null,
-      "colorB": null,
-      "colorBe": null,
-      "colorR": null,
-      "colorG": null,
-      "colorP": null,
-      "originalPrice": "",
-      "offerPrice": "",
-      "percentage": "20",
-      "img": "model2.png",
       "slug": "2"
     }
   ]

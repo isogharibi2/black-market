@@ -56,15 +56,18 @@ input {
 }
 
 ul {
+  cursor: pointer;
   list-style: none;
 }
 
 a {
+  cursor: pointer;
   text-decoration: none;
 }
 
 a {
   color: black;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */
