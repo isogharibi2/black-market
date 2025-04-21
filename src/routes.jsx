@@ -22,6 +22,7 @@ function App() {
     "/auth/verify",
     "/auth/forget-password",
     "/auth/verification",
+    "/Products"
   ];
   const hideNav = notAllowed.includes(location.pathname);
 
