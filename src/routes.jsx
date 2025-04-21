@@ -11,6 +11,7 @@ import SpecailOffer from "@app/pages/Products/specail-offers";
 import User from "@app/pages/profile/user";
 import Admin from "@app/pages/profile/admin";
 import Productdetlais from "@app/ui/components/productdetlais";
+import Product from "@app/products/products";
 
 function App() {
   const location = useLocation();
@@ -40,6 +41,7 @@ function App() {
         <Route path="/profile/user" element={<User/>}/>
         <Route path="/profile/admin/new-product" element={<Admin/>}/>
         <Route path="/products/product-details/:slug" element={ <Productdetlais />} />
+        <Route path="/Products" element={ <Product />} />
       </Routes>
     </>
   );
