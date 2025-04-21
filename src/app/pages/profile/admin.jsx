@@ -17,7 +17,7 @@ export default function NewProduct() {
     if (file) {
       setImagePreview(URL.createObjectURL(file));
       setImageSrc(file.name);
-      console.log(file);
+      console.log(file.name);
     }
   };
 
@@ -44,6 +44,7 @@ export default function NewProduct() {
         originalPrice: formData.get('originalPrice'),
         offerPrice: formData.get('offerPrice'),
         percentage: formData.get('percentage'),
+        img : imageSrc,
         slug: formData.get('en-title'),
       });
       return response.data;
