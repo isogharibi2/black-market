@@ -1,0 +1,6 @@
+@use "/src/sass/utils/mixins" as *;
+
+.ProductsDetails {
+    @include flex(row , space-evenly , center);
+    padding-top: 1rem;
+}

@@ -1,0 +1,30 @@
+@use "./fonts";
+
+:root {
+  direction: rtl;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: fonts.$regular;
+}
+
+ul {
+  cursor: pointer;
+  list-style: none;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a {
+  cursor: pointer;
+  color: black;
+  cursor: pointer;
+}

@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@assets/*": ["public/assets/*"],
+      "@app/*": ["src/app/*"],
+      "@pages/*": ["src/app/pages/*"],
+      "@helpers/*": ["src/helpers/*"],
+      "@sass/*": ["src/sass/*"],
+      "@css/*": ["src/css/*"],
+      "@ui/*": ["src/app/ui/*"],
+      "@global-layout/*": ["src/app/ui/layouts/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}
