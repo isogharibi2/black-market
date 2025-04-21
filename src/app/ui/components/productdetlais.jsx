@@ -5,34 +5,38 @@ import { useParams } from 'react-router-dom';
 
 export default function Productdetlais() {
 
-  const {slug} = useParams();
+  const { slug } = useParams();
 
-    const handelchangeproducts = async () => {
-      try {
-        const { data } = await axios.get(`${baseUrl}/specail-offers?slug=${slug}`);
-        return data
-      } catch (error) {
-        console.log(error)
-      }
+  const handelchangeproducts = async () => {
+    try {
+      const { data } = await axios.get(`${baseUrl}/specail-offers?slug=${slug}`);
+      return data
+    } catch (error) {
+      console.log(error)
     }
+  }
 
-    const { data : ProductSending = [] , isError , isLoading } = useQuery({
-      queryKey : ["product-detail"],
-      queryFn : handelchangeproducts
-    });
+  const { data: ProductSending = [], isError, isLoading } = useQuery({
+    queryKey: ["product-detail"],
+    queryFn: handelchangeproducts
+  });
 
-    if (isLoading) return (
-      <h1>Product Sending is loading ......</h1>
-    )
+  if (isLoading) return (
+    <h1>Product Sending is loading ......</h1>
+  )
 
-    if (isError) return (
-      <h1>we have a to much a error for sending the products ❗</h1>
-    )
+  if (isError) return (
+    <h1>we have a to much a error for sending the products ❗</h1>
+  )
 
   return (
     <div>
-      {ProductSending.map((products)=>(
-        <h1>{products.title}</h1>
+      {ProductSending.map((products) => (
+        <div key={products}>
+          <h1>{products.title}</h1>
+          <h1>{products.brand}</h1>
+          <h1>{products.sizeSM}</h1>
+        </div>
       ))}
     </div>
   )

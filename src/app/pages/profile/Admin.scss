@@ -1,33 +1,142 @@
-@use "/src/sass/utils/mixins.scss" as *;
-@use "/src/sass/base/fonts" as *;
-@use "/src/sass/base/colors" as *;
-
-.HeroAdmin {
-    @include flex (center, center, row);
-}
-
-.HeroForm {
-    @include flex (center, space-between, row);
-    width: 100%;
-    padding: 1.7rem;
-    gap: 1rem;
-}
-
-.first-filed {
-    width: 50%;
-
+.newProduct {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+  
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+    }
+  
     fieldset {
-        height: 133px;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  
+      legend {
+        padding: 0 0.5rem;
+        font-weight: 600;
+        color: #444;
+        font-size: 1.1rem;
+      }
     }
-}
-
-.Second-filed {
-    width: 50%;
-    height: 400px;
-
+  
+    .newPrInput {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+  
+      &:focus {
+        outline: none;
+        border-color: #4a90e2;
+        box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+      }
+  
+      &::placeholder {
+        color: #999;
+      }
+    }
+  
+    .sizes, .colors {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      align-items: center;
+  
+      label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+        font-size: 0.9rem;
+        color: #555;
+  
+        &:first-child {
+          width: 100%;
+          font-weight: 500;
+          margin-bottom: 0.5rem;
+          font-size: 1rem;
+        }
+      }
+  
+      input[type="checkbox"] {
+        width: 1.1rem;
+        height: 1.1rem;
+        accent-color: #4a90e2;
+        cursor: pointer;
+      }
+    }
+  
+    input[type="file"] {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px dashed #ccc;
+      border-radius: 4px;
+      background: #f9f9f9;
+      cursor: pointer;
+  
+      &:hover {
+        border-color: #aaa;
+      }
+    }
+  
     img {
-        width: 250px;
-        height: max-content;
+      max-width: 100%;
+      max-height: 300px;
+      display: block;
+      margin-top: 1rem;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border: 1px solid #eee;
     }
-
-}
+  
+    button[type="submit"] {
+      grid-column: 1 / -1;
+      padding: 0.8rem 1.5rem;
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 1rem;
+  
+      &:hover {
+        background-color: darken(#4a90e2, 10%);
+      }
+  
+      &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+    }
+  
+    .error-message {
+      grid-column: 1 / -1;
+      color: #d32f2f;
+      background-color: #fde8e8;
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      border-left: 3px solid #d32f2f;
+    }
+  }
