@@ -1,84 +1,38 @@
-import { baseUrl } from '@app/helpers/variables';
-import { useQuery } from '@tanstack/react-query';
-import axios from 'axios';
-import { useParams } from 'react-router-dom';
-import './productdetlais.scss';
+import { baseUrl } from '@app/helpers/variables'
+import { useQuery } from '@tanstack/react-query'
+import axios from 'axios'
+import React, { useState } from 'react'
 
-export default function ProductDetails() {
-  const { slug } = useParams();
+export default function Productdetlais() {
 
-  const fetchProductDetails = async () => {
+  const [getedItems, setGetdItems] = useState("")
+
+  const GetProInf = async () => {
     try {
-      const { data } = await axios.get(`${baseUrl}/specail-offers?slug=${slug}`);
-      return data;
-    } catch (error) {
-      console.error('Error fetching product details:', error);
-      throw error;
+      const { itemed } = await axios.get(`${baseUrl}/specail-offers`);
+      return itemed
+    } catch (err) {
+      console.log(err)
     }
-  };
+  }
 
-  const {
-    data: products = [],
-    isError,
-    isLoading,
-    isFetching
-  } = useQuery({
-    queryKey: ["product-detail", slug],
-    queryFn: fetchProductDetails
-  });
-
-  if (isLoading || isFetching) return (
-    <div className="product-loading">
-      <div className="loading-spinner"></div>
-      <p>Loading product details...</p>
-    </div>
-  );
-
-  if (isError) return (
-    <div className="product-error">
-      <div className="error-icon">❗</div>
-      <h2>Oops! Something went wrong</h2>
-      <p>We're having trouble loading the product details.</p>
-      <button className="retry-button" onClick={() => window.location.reload()}>
-        Try Again
-      </button>
-    </div>
-  );
+  const { itemed : Items } = useQuery({
+    queryKey: ["Items", getedItems],
+    GetProInf,
+  })
 
   return (
-    <div className="product-details-container">
-      {products.map((product) => (
-        <div key={product.id} className="product-card">
-          <div className="product-image-container">
-            <div className="image-placeholder">
-              <img className='Product' src={`/assets/images/${product.img}`} alt="" />
-            </div>
+    <section>
+      <div className='HeroInfo'>
+        |{Items.map((ItemS)=>(
+          <div key={ItemS.id}>
+            
           </div>
+        ))}
+      </div>
+      <div className='HeroIg'>
 
-          <div className="product-info">
-            <h1 className="product-title">{product.title}</h1>
-            <div className="brand-section">
-              <span className="brand-label">Brand:</span>
-              <span className="brand-name">{product.brand}</span>
-            </div>
-
-            <div className="size-section">
-              <span className="size-label">Available Sizes:</span>
-              <div className="size-bubbles">
-                <span className="size-bubble">{product.sizeSM && "sizeSM"}</span>
-                {/* Add more sizes if available */}
-              </div>
-            </div>
-
-            <div className="action-buttons">
-              <button className="add-to-cart">Add to Cart</button>
-              <button className="wishlist-button">
-                <span className="heart-icon">♥</span> Wishlist
-              </button>
-            </div>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
+      </div>
+    </section>
+  )
 }

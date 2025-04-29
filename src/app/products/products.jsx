@@ -9,7 +9,7 @@ import { Link, useNavigate } from "react-router-dom";
 export default function Products() {
 
   const loginState = localStorage.getItem('verified');
-  const [queryValue, setQueryValue] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
 
   const navigate = useNavigate()
 
@@ -45,7 +45,7 @@ export default function Products() {
 
   const queryFn = async () => {
     try {
-      const { data } = await axios.get(`${baseUrl}/specail-offers?Category=${queryValue}`);
+      const { data } = await axios.get(`${baseUrl}/specail-offers`);
       return data
     } catch (err) {
       console.log(err)
@@ -53,16 +53,16 @@ export default function Products() {
   }
 
   const { data: products } = useQuery({
-    queryKey: ["products", queryValue],
+    queryKey: ["products", selectedCategory],
     queryFn,
   })
 
   const categories = [...new Set(products?.map(product => product.Category))];
 
-  
+  const filteredProducts = products?.filter((product) => product.Category === selectedCategory);
 
   return (
-    <section>
+    <section className=''>
       <nav>
         <ul>
           {links.map((link) => (
@@ -87,13 +87,23 @@ export default function Products() {
         </div>
         <ul>
         {categories?.map((category , index) => (
-            <li onClick={(e) => setQueryValue(e.target.textContent)} key={index}> {category} </li>
+            <li onClick={(e) => setSelectedCategory(category)} key={index}> {category} </li>
           ))}
         </ul>
         <h3>BLACK DARK</h3>
       </div>
       <div className='Products'>
-        {products && products.map((products) => (
+        {selectedCategory !== "" ? filteredProducts?.map((products) => (
+          <div key={products.id}>
+            <p></p>
+            <h3>{products.title}</h3>
+            <p>{products.Category}</p>
+            <p>BRAND :{products.brand}</p>
+            <p>ORIGINAL PRICE : {products.originalPrice}تومان</p>
+            <p>OFFER PRICE : {products.offerPrice ? products.offerPrice : "not available"}تومان</p>
+            <p>DISCOUNT : {products.percentage}</p>
+          </div>
+        )) : products?.map((products) => (
           <div key={products.id}>
             <p></p>
             <h3>{products.title}</h3>

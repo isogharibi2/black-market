@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import "./Admin.scss";
 import { QueryClient, useMutation } from "@tanstack/react-query";
 import axios from "axios";
 import { baseUrl } from "@app/helpers/variables";
+import { useNavigate } from "react-router-dom";
 
 export default function NewProduct() {
 
-  const queryClient = new QueryClient();
+    const navigate = useNavigate();
+    const queryClient = new QueryClient();
 
   const [imagePreview, setImagePreview] = useState(null);
   const [imageSrc, setImageSrc] = useState(null);
@@ -20,6 +22,12 @@ export default function NewProduct() {
       console.log(file.name);
     }
   };
+
+  useEffect(() => {
+    if (!localStorage.getItem("verified")) {
+      navigate("/auth/register");
+    }
+  })
 
   const mutationFn = async (event) => {
 
@@ -44,7 +52,8 @@ export default function NewProduct() {
         originalPrice: formData.get('originalPrice'),
         offerPrice: formData.get('offerPrice'),
         percentage: formData.get('percentage'),
-        img : imageSrc,
+        img: imageSrc,
+        img: imageSrc,
         slug: formData.get('en-title'),
       });
       return response.data;

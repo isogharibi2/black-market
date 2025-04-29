@@ -121,12 +121,12 @@
     gap: 2rem;
 }
 
-div {
+.Products {
 
   > div {
     width: max-content;
     height: max-content;
-    background-color: #fff;
+    background-color: #202020;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -134,25 +134,15 @@ div {
     padding: 1.5rem;
 
     h3 {
-      color: #000000;
+      color: #ffffff;
       margin-bottom: 1rem;
       font-size: 1.4rem;
       position: relative;
       padding-bottom: 0.5rem;
-
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 50px;
-        height: 2px;
-        background-color: #4fd1c5;
-      }
     }
 
     p {
-      color: #555;
+      color: #ffffff;
       margin-bottom: 0.8rem;
       line-height: 1.6;
       font-weight: 600;
@@ -162,7 +152,7 @@ div {
         top: 1.5rem;
         right: 1.5rem;
         background-color: #4fd1c5;
-        color: white;
+        color: rgb(255, 255, 255);
         padding: 0.3rem 0.8rem;
         border-radius: 20px;
         font-size: 0.8rem;
@@ -170,13 +160,13 @@ div {
       }
 
       &:nth-of-type(2) {
-        color: #888;
+        color: #ffffff;
         font-size: 0.9rem;
       }
 
       &:nth-of-type(4) {
         text-decoration: line-through;
-        color: #999;
+        color: #d8d8d8;
       }
 
       &:nth-of-type(5) {
