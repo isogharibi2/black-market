@@ -257,5 +257,57 @@
       "img": "Frame 259.png",
       "slug": "Zip-Up-Sweater"
     }
+  ],
+  "special-products": [
+    {
+      "id": 1,
+      "name": "کت بربری Burberry مدل A8 ",
+      "OgPrice": "1,416,000",
+      "FinalPrice": "1,916,000",
+      "image": "https://i.ibb.co/KpcNvtVw/model1.png",
+      "address": "/products/special-offers/Burberry",
+      "slug": "Burberry",
+      "OfferValue": "50%"
+    },
+    {
+      "id": 2,
+      "name": "کت شلوار  بروکس Brooks",
+      "OgPrice": "1,416,000",
+      "FinalPrice": "1,916,000",
+      "image": "https://i.ibb.co/GfQFmFbw/model2.png",
+      "address": "/products/special-offers/Brooks",
+      "slug": "Brooks",
+      "OfferValue": "40%"
+    },
+    {
+      "id": 3,
+      "name": "کت شلوارکانالی 320 Canali",
+      "OgPrice": "1,416,000",
+      "FinalPrice": "1,916,000",
+      "image": "https://i.ibb.co/C3bny78V/model3.png",
+      "address": "/products/special-offers/Canali",
+      "slug": "Canali",
+      "OfferValue": "30%"
+    },
+    {
+      "id": 4,
+      "name": "کت زنانه اس پی ایتالیا SP-Italy",
+      "OgPrice": "1,416,000",
+      "FinalPrice": "1,916,000",
+      "image": "https://i.ibb.co/d4BxtS2R/model4.png",
+      "address": "/products/special-offers/SP-Italy",
+      "slug": "SP-Italy",
+      "OfferValue": "20%"
+    },
+    {
+      "id": 5,
+      "name": "کت چرمی بلک مدل وسطای vstay",
+      "OgPrice": "1,416,000",
+      "FinalPrice": "1,916,000",
+      "image": "https://i.ibb.co/fdM5VTQG/model5.png",
+      "address": "/products/special-offers/vstay",
+      "slug": "vstay",
+      "OfferValue": "10%"
+    }
   ]
 }

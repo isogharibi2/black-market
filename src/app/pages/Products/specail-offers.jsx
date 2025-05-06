@@ -12,7 +12,7 @@ export default function SpecailOffer() {
   useEffect(() => {
     const GetProductDeatls = async () => {
       const response = await axios.get(
-        `${baseUrl}/specail-offers?slug=${slug}`
+        `${baseUrl}/special-products?slug=${slug}`
       );
       SetProductDetails(response.data);
     };
@@ -23,11 +23,11 @@ export default function SpecailOffer() {
     <>
       {ProductDetails.map((product) => (
         <div key={product.id}>
-          <h1>{product.title}</h1>
-          <span>{product.ogPrice}</span>
+          <h1>{product.name}</h1>
+          <span>{product.OgPrice}</span>
           <span>{product.FinalPrice}</span>
           <img src={product.image} alt="" />
-          <span>{product.offer}</span>
+          <span>{product.OfferValue}</span>
         </div>
       ))}
     </>
