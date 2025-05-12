@@ -256,6 +256,94 @@
       "percentage": "0",
       "img": "Frame 259.png",
       "slug": "Zip-Up-Sweater"
+    },
+    {
+      "id": "27ee",
+      "title": "",
+      "enTitle": "",
+      "brand": "",
+      "sizeSM": null,
+      "sizeS": null,
+      "sizeM": null,
+      "sizeL": null,
+      "sizeXL": null,
+      "colorB": null,
+      "colorBe": null,
+      "colorR": null,
+      "colorG": null,
+      "colorP": null,
+      "originalPrice": "",
+      "offerPrice": "",
+      "percentage": "",
+      "category": "کفش",
+      "img": null,
+      "slug": ""
+    },
+    {
+      "id": "28be",
+      "title": "",
+      "enTitle": "",
+      "brand": "",
+      "sizeSM": null,
+      "sizeS": null,
+      "sizeM": null,
+      "sizeL": null,
+      "sizeXL": null,
+      "colorB": null,
+      "colorBe": null,
+      "colorR": null,
+      "colorG": null,
+      "colorP": null,
+      "originalPrice": "",
+      "offerPrice": "",
+      "percentage": "",
+      "category": "کفش",
+      "img": null,
+      "slug": ""
+    },
+    {
+      "id": "0acc",
+      "title": "",
+      "enTitle": "",
+      "brand": "",
+      "sizeSM": null,
+      "sizeS": null,
+      "sizeM": null,
+      "sizeL": null,
+      "sizeXL": null,
+      "colorB": null,
+      "colorBe": null,
+      "colorR": null,
+      "colorG": null,
+      "colorP": null,
+      "originalPrice": "",
+      "offerPrice": "",
+      "percentage": "",
+      "category": "کفش",
+      "img": null,
+      "slug": ""
+    },
+    {
+      "id": "0a33",
+      "title": "",
+      "enTitle": "",
+      "brand": "",
+      "sizeSM": null,
+      "sizeS": null,
+      "sizeM": null,
+      "sizeL": null,
+      "sizeXL": null,
+      "colorB": null,
+      "colorBe": null,
+      "colorR": null,
+      "colorG": null,
+      "colorP": null,
+      "originalPrice": "",
+      "offerPrice": "",
+      "percentage": "",
+      "category": "کفش",
+      "img": null,
+      "slug": ""
     }
   ],
   "special-products": [
@@ -308,6 +396,22 @@
       "address": "/products/special-offers/vstay",
       "slug": "vstay",
       "OfferValue": "10%"
+    }
+  ],
+  "categories": [
+    "پیراهن",
+    "تیشرت",
+    "شلوار",
+    "کت و شلوار",
+    "ژاکت",
+    "کاپشن",
+    {
+      "id": "2d6a",
+      "category": "کفش"
+    },
+    {
+      "id": "d6ef",
+      "category": "کفش"
     }
   ]
 }
