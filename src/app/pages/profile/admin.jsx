@@ -19,15 +19,6 @@ export default function NewProduct() {
   const [imageSrc, setImageSrc] = useState(null);
   const [categoryInput, setcategoryInput] = useState("");
 
-  //  const categories = [
-  //   "پیراهن",
-  //   "تیشرت",
-  //   "شلوار",
-  //   "کت و شلوار",
-  //   "ژاکت",
-  //   "کاپشن"
-  // ]
-
   const handleImageChange = (event) => {
     const file = event.target.files[0];
     if (file) {
@@ -47,10 +38,17 @@ export default function NewProduct() {
     event.preventDefault();
     const formData = new FormData(event.target);
 
-    if (formData.get("category") != categoryInput) {
-      await axios.post(`${baseUrl}/categories`, {
-        category: formData.get("category"),
-      });
+    const NewCategories = formData.get('category');
+    const NewCategoryUnique = !categories.some((cat) => cat.category === NewCategories);
+
+    if (NewCategoryUnique) {
+      try {
+        await axios.post(`${baseUrl}/categories`, {
+          category: NewCategories
+        })
+      } catch (err) {
+        console.error(err)
+      }
     }
 
     try {
@@ -142,15 +140,22 @@ export default function NewProduct() {
               onChange={(e) => setcategoryInput(e.target.value)}
             />
 
-            <select name="" id="">
-              {categoryInput !== "" ? <option value={category}>{category}</option>
+            <div className="select-wrapper">
+              <select name="category">
+                {categories?.map((category, index) => (
+                  <option key={index} value={category.category}>
+                    {category.category}
+                  </option>
+                ))}
+                {/* {categoryInput !== "" ? <option value={category}>{category}</option>
                 : categories?.map((category, index) => (
-                    <option key={index} value={category.category}>
-                      {" "}
-                      {category.category}{" "}
-                    </option>
-                  ))}
-            </select>
+                  <option key={index} value={category.category}>
+                    {" "}
+                    {category.category}{" "}
+                  </option>
+                ))} */}
+              </select>
+            </div>
           </fieldset>
           <fieldset>
             <legend> رنگ و سایزبندی </legend>

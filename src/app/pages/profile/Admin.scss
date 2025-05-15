@@ -140,3 +140,30 @@
       border-left: 3px solid #d32f2f;
     }
   }
+
+  .select-wrapper {
+  width: 100%;
+  max-width: 280px;
+  margin-top: 1rem;
+
+  select {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+    color: #333;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: #efefef;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: #7c3aed; /* رنگ بنفش زیبا */
+      box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+    }
+  }
+}

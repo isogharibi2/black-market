@@ -258,7 +258,7 @@
       "slug": "Zip-Up-Sweater"
     },
     {
-      "id": "27ee",
+      "id": "8ee4",
       "title": "",
       "enTitle": "",
       "brand": "",
@@ -275,73 +275,7 @@
       "originalPrice": "",
       "offerPrice": "",
       "percentage": "",
-      "category": "کفش",
-      "img": null,
-      "slug": ""
-    },
-    {
-      "id": "28be",
-      "title": "",
-      "enTitle": "",
-      "brand": "",
-      "sizeSM": null,
-      "sizeS": null,
-      "sizeM": null,
-      "sizeL": null,
-      "sizeXL": null,
-      "colorB": null,
-      "colorBe": null,
-      "colorR": null,
-      "colorG": null,
-      "colorP": null,
-      "originalPrice": "",
-      "offerPrice": "",
-      "percentage": "",
-      "category": "کفش",
-      "img": null,
-      "slug": ""
-    },
-    {
-      "id": "0acc",
-      "title": "",
-      "enTitle": "",
-      "brand": "",
-      "sizeSM": null,
-      "sizeS": null,
-      "sizeM": null,
-      "sizeL": null,
-      "sizeXL": null,
-      "colorB": null,
-      "colorBe": null,
-      "colorR": null,
-      "colorG": null,
-      "colorP": null,
-      "originalPrice": "",
-      "offerPrice": "",
-      "percentage": "",
-      "category": "کفش",
-      "img": null,
-      "slug": ""
-    },
-    {
-      "id": "0a33",
-      "title": "",
-      "enTitle": "",
-      "brand": "",
-      "sizeSM": null,
-      "sizeS": null,
-      "sizeM": null,
-      "sizeL": null,
-      "sizeXL": null,
-      "colorB": null,
-      "colorBe": null,
-      "colorR": null,
-      "colorG": null,
-      "colorP": null,
-      "originalPrice": "",
-      "offerPrice": "",
-      "percentage": "",
-      "category": "کفش",
+      "category": "کت",
       "img": null,
       "slug": ""
     }
@@ -399,19 +333,13 @@
     }
   ],
   "categories": [
-    "پیراهن",
-    "تیشرت",
-    "شلوار",
-    "کت و شلوار",
-    "ژاکت",
-    "کاپشن",
     {
-      "id": "2d6a",
-      "category": "کفش"
+      "id": "0179",
+      "category": "کت و شلوار"
     },
     {
-      "id": "d6ef",
-      "category": "کفش"
+      "id": "9c23",
+      "category": "کت"
     }
   ]
 }
