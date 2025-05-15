@@ -19,7 +19,7 @@ export default function Home() {
           </div>
           <img
             className="img"
-            src="/public/assets/images/hero-model.png"
+            src="/assets/images/hero-model.png"
             alt=""
           />
         </div>
@@ -34,7 +34,7 @@ export default function Home() {
             </div>
             <img
               className="men-img"
-              src="/public/assets/images/man.png"
+              src="/assets/images/man.png"
               alt=""
             />
             <div className="multi-p">
@@ -48,7 +48,7 @@ export default function Home() {
           <div className="women-clothes-p1">
             <img
               className="women-img"
-              src="/public/assets/images/women.png"
+              src="/assets/images/women.png"
               alt=""
             />
           </div>
