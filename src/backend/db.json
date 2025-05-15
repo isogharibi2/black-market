@@ -278,11 +278,33 @@
       "category": "کت",
       "img": null,
       "slug": ""
+    },
+    {
+      "id": "d5fd",
+      "title": "",
+      "enTitle": "",
+      "brand": "",
+      "sizeSM": null,
+      "sizeS": null,
+      "sizeM": null,
+      "sizeL": null,
+      "sizeXL": null,
+      "colorB": null,
+      "colorBe": null,
+      "colorR": null,
+      "colorG": null,
+      "colorP": null,
+      "originalPrice": "",
+      "offerPrice": "",
+      "percentage": "",
+      "category": "شلوار",
+      "img": null,
+      "slug": ""
     }
   ],
   "special-products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "کت بربری Burberry مدل A8 ",
       "OgPrice": "1,416,000",
       "FinalPrice": "1,916,000",
@@ -292,7 +314,7 @@
       "OfferValue": "50%"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "کت شلوار  بروکس Brooks",
       "OgPrice": "1,416,000",
       "FinalPrice": "1,916,000",
@@ -302,7 +324,7 @@
       "OfferValue": "40%"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "کت شلوارکانالی 320 Canali",
       "OgPrice": "1,416,000",
       "FinalPrice": "1,916,000",
@@ -312,7 +334,7 @@
       "OfferValue": "30%"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "کت زنانه اس پی ایتالیا SP-Italy",
       "OgPrice": "1,416,000",
       "FinalPrice": "1,916,000",
@@ -322,7 +344,7 @@
       "OfferValue": "20%"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "کت چرمی بلک مدل وسطای vstay",
       "OgPrice": "1,416,000",
       "FinalPrice": "1,916,000",
@@ -340,6 +362,10 @@
     {
       "id": "9c23",
       "category": "کت"
+    },
+    {
+      "id": "26d5",
+      "category": "شلوار"
     }
   ]
 }
