@@ -37,6 +37,9 @@ export default function NewProduct() {
     }
   });
 
+  const allsize = ['SM' , 'S' , 'M' , 'L' , 'XL' , 'XS'];
+  const allcolors = ['Blue' , 'Biege' , 'Red' , 'Pink' , 'Green']
+
   const mutationFn = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -56,25 +59,16 @@ export default function NewProduct() {
       }
     }
 
+    const selectedSizes = allsize.filter(size=> formData.get(`size${size}`));
+    const selectedColors = allcolors.filter(color => formData.get(`colors-${color}`))
+
     try {
       const response = await axios.post(`${baseUrl}/specail-offers`, {
         title: formData.get("title"),
         enTitle: formData.get("en-title"),
         brand: formData.get("brand"),
-        sizes: [
-            formData.get("sizeSM"),
-            formData.get("sizeS"),
-            formData.get("sizeM"),
-            formData.get("sizeL"),
-            formData.get("sizeXL"),
-        ],
-        colors : [
-          formData.get("colorB"),
-          formData.get("colorBe"),
-          formData.get("colorR"),
-          formData.get("colorG"),
-          formData.get("colorP"),
-        ],
+        sizes: selectedSizes,
+        colors : selectedColors,
         originalPrice: formData.get("originalPrice"),
         offerPrice: formData.get("offerPrice"),
         percentage: formData.get("percentage"),
@@ -169,29 +163,19 @@ export default function NewProduct() {
             <legend> رنگ و سایزبندی </legend>
             <div className="sizes">
               <label htmlFor="sizes"> سایز های موجود محصول </label>
-              <label htmlFor="siezSM"> SM </label>
-              <input type="checkbox" name="sizeSM" id="sizeSM" />
-              <label htmlFor="sizeS"> S </label>
-              <input type="checkbox" name="sizeS" id="sizeS" />
-              <label htmlFor="sizeM"> M </label>
-              <input type="checkbox" name="sizeM" id="sizeM" />
-              <label htmlFor="sizeL"> L </label>
-              <input type="checkbox" name="sizeL" id="sizeL" />
-              <label htmlFor="sizeXL"> XL </label>
-              <input type="checkbox" name="sizeXL" id="sizeXL" />
+              {allsize.map((size) => (
+                <label key={size}>
+                  {size} <input type="checkbox" name={`size${size}`} />
+                </label>
+              ))}
             </div>
             <div className="colors">
               <label htmlFor="colors"> رنگ های موجود محصول </label>
-              <label htmlFor="colorB"> Blue </label>
-              <input type="checkbox" name="colorB" id="colorB" />
-              <label htmlFor="colorBe"> Beige </label>
-              <input type="checkbox" name="colorBe" id="colorBe" />
-              <label htmlFor="colorR"> Red </label>
-              <input type="checkbox" name="colorR" id="colorR" />
-              <label htmlFor="colorG"> Green </label>
-              <input type="checkbox" name="colorG" id="colorG" />
-              <label htmlFor="colorP"> Pink </label>
-              <input type="checkbox" name="colorP" id="colorP" />
+              {allcolors.map((color) => (
+                <label key={color}>
+                  {color} <input type="checkbox" name={`colors-${color}`} />
+                </label>
+              ))}
             </div>
           </fieldset>
           <fieldset>
