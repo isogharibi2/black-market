@@ -10,7 +10,7 @@ export default function SpecialSale() {
 
   const queryFn = async () => {
     try {
-      const { data } = await axios.get(`${baseUrl}/special-products`);
+      const { data } = await axios.get(`${baseUrl}/specail-offers`);
       return data
     } catch (err) {
       console.error(err)
@@ -27,12 +27,12 @@ export default function SpecialSale() {
       {images?.map((products) => (
         <Product
           key={products.id}
-          image={products.image}
-          name={products.name}
-          OgPrice={products.OgPrice}
-          address={products.address}
-          FinalPrice={products.FinalPrice}
-          OfferValue={products.OfferValue}
+          image={products.img}
+          name={products.title}
+          OgPrice={products.originalPrice}
+          address={products.img}
+          FinalPrice={products.offerPrice}
+          OfferValue={products.percentage}
         />
       ))}
     </div>

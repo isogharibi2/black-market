@@ -8,24 +8,27 @@ import {
   useQuery,
 } from "@tanstack/react-query";
 import axios from "axios";
-import { baseUrl } from "@app/helpers/variables";
+import { baseUrl, BBUrlKey, ImgBBUrl } from "@app/helpers/variables";
 import { useNavigate } from "react-router-dom";
 
 export default function NewProduct() {
   const navigate = useNavigate();
   const queryClient = new QueryClient();
 
-  const [imagePreview, setImagePreview] = useState(null);
-  const [imageSrc, setImageSrc] = useState(null);
+  const [imageSrc, setImageSrc] = useState("");
   const [categoryInput, setcategoryInput] = useState("");
 
-  const handleImageChange = (event) => {
-    const file = event.target.files[0];
-    if (file) {
-      setImagePreview(URL.createObjectURL(file));
-      setImageSrc(file.name);
-      console.log(file.name);
-    }
+  const handleImageChange = async (e) => {
+    const file = e.target.files[0];
+    const formData = new FormData();
+    formData.append('image' , file)
+
+    const response = await axios.post(`${ImgBBUrl}?key=${BBUrlKey}` ,formData, {
+      headers : {
+        "Content-Type" : "multipart/form-data"
+      }
+    });
+    setImageSrc(response.data.data.url);
   };
 
   useEffect(() => {
@@ -38,16 +41,18 @@ export default function NewProduct() {
     event.preventDefault();
     const formData = new FormData(event.target);
 
-    const NewCategories = formData.get('category');
-    const NewCategoryUnique = !categories.some((cat) => cat.category === NewCategories);
+    const NewCategories = formData.get("category");
+    const NewCategoryUnique = !categories.some(
+      (cat) => cat.category === NewCategories
+    );
 
     if (NewCategoryUnique) {
       try {
         await axios.post(`${baseUrl}/categories`, {
-          category: NewCategories
-        })
+          category: NewCategories,
+        });
       } catch (err) {
-        console.error(err)
+        console.error(err);
       }
     }
 
@@ -56,22 +61,25 @@ export default function NewProduct() {
         title: formData.get("title"),
         enTitle: formData.get("en-title"),
         brand: formData.get("brand"),
-        sizeSM: formData.get("sizeSM"),
-        sizeS: formData.get("sizeS"),
-        sizeM: formData.get("sizeM"),
-        sizeL: formData.get("sizeL"),
-        sizeXL: formData.get("sizeXL"),
-        colorB: formData.get("colorB"),
-        colorBe: formData.get("colorBe"),
-        colorR: formData.get("colorR"),
-        colorG: formData.get("colorG"),
-        colorP: formData.get("colorP"),
+        sizes: [
+            formData.get("sizeSM"),
+            formData.get("sizeS"),
+            formData.get("sizeM"),
+            formData.get("sizeL"),
+            formData.get("sizeXL"),
+        ],
+        colors : [
+          formData.get("colorB"),
+          formData.get("colorBe"),
+          formData.get("colorR"),
+          formData.get("colorG"),
+          formData.get("colorP"),
+        ],
         originalPrice: formData.get("originalPrice"),
         offerPrice: formData.get("offerPrice"),
         percentage: formData.get("percentage"),
         category: formData.get("category"),
-        img: imageSrc,
-        img: imageSrc,
+        imageSrc ,
         slug: formData.get("en-title"),
       });
       return response.data;
@@ -217,7 +225,7 @@ export default function NewProduct() {
               id="imageProduct"
               onChange={handleImageChange}
             />
-            {imagePreview && <img src={imagePreview} alt="Preview" />}
+            {imageSrc && <img src={imageSrc} alt="Preview" />}
           </fieldset>
         </section>
         <button type="submit" disabled={isLoading}>

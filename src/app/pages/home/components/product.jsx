@@ -4,14 +4,19 @@ import "./product.scss";
 import { Link } from "react-router-dom";
 import Offer from "@app/ui/components/offer";
 
-export default function Product({ image, OgPrice, FinalPrice, name, address ,OfferValue }) {
+export default function Product({
+  image,
+  OgPrice,
+  FinalPrice,
+  name,
+  address,
+  OfferValue,
+}) {
   return (
     <>
       <Link to={address}>
         <div className="productDetail">
-          <Offer
-          OfferValue={OfferValue}
-          />
+          <Offer OfferValue={OfferValue} />
           {/* badgecomponent */}
           <img src={image} alt="" />
           <div className="info">

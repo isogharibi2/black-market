@@ -3,4 +3,5 @@
 .ProductsDetails {
     @include flex(row , space-evenly , center);
     padding-top: 1rem;
+    // padding: 1rem;
 }
