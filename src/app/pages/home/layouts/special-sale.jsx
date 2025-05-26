@@ -30,7 +30,7 @@ export default function SpecialSale() {
           image={products.img}
           name={products.title}
           OgPrice={products.originalPrice}
-          address={products.img}
+          address={`/products/special-offers/${products.slug}`}
           FinalPrice={products.offerPrice}
           OfferValue={products.percentage}
         />

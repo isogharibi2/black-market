@@ -23,16 +23,21 @@ export default function SpecailOffer() {
     <>
       {ProductDetails?.map((product) => (
         <div key={product.id}>
-          <h1>{product.name}</h1>
+          <h1>{product.title}</h1>
           <ul>
             {product.sizes?.map((size, index) => (
-              <li key={index}>{JSON.stringify(size)}</li>
+              <li key={index}> {size} </li>
             ))}
           </ul>
-          <span>{product.OgPrice}</span>
-          <span>{product.FinalPrice}</span>
-          <img src={product.image} alt="" />
-          <span>{product.OfferValue}</span>
+          <ul>
+            {product.colors.map((color , index)=>(
+              <li key={index}> {color} </li>
+            ))}
+          </ul>
+          <span>{product.originalPrice}</span>
+          <span>{product.offerPrice}</span>
+          <img src={product.img} alt="" />
+          <span>{product.percentage}</span>
         </div>
       ))}
     </>

@@ -63,7 +63,7 @@
       ],
       "originalPrice": "۲,۲۵۰,۰۰۰",
       "offerPrice": "۱,۶۸۷,۰۰۰",
-      "percentage": "23",
+      "percentage": "36",
       "category": "Brooks",
       "img": "https://i.ibb.co/GfQFmFbw/model2.png",
       "slug": "Brooks man clothes"
@@ -119,6 +119,32 @@
       "category": "SP Italy",
       "img": "https://i.ibb.co/d4BxtS2R/model4.png",
       "slug": "SP Italy women clothes"
+    },
+    {
+      "id": "7412",
+      "title": "کت چرمی بلک مدل وسطای vstay",
+      "enTitle": "کت چرمی بلک مدل وسطای vstay",
+      "brand": "vstay",
+      "sizes": [
+        "on",
+        null,
+        "on",
+        "on",
+        null
+      ],
+      "colors": [
+        "on",
+        "on",
+        null,
+        null,
+        null
+      ],
+      "originalPrice": "۱,۷۰۰,۰۰۰",
+      "offerPrice": "۱,۲۷۵,۰۰۰",
+      "percentage": "23",
+      "category": "vstay",
+      "img": "https://i.ibb.co/fdM5VTQG/model5.png",
+      "slug": "vstay men clothes"
     }
   ],
   "categories": [
