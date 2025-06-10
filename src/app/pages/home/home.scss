@@ -71,7 +71,7 @@
   }
 
   .women-clothes-p1 {
-    background-color: #B5B9B8;
+    background-color: #b5b9b8;
     width: 31.25rem;
     height: 20rem;
     border-radius: 0 1rem 1rem 1rem;
@@ -79,7 +79,7 @@
   }
 
   .women-clothes-p2 {
-    background-color: #B5B9B8;
+    background-color: #b5b9b8;
     width: 500px;
     height: 155px;
     position: absolute;
@@ -330,7 +330,6 @@
     border-radius: 0.5rem;
   }
 
-
   .men-clothes {
     .men-clothes-p1 {
       background-color: #e3e3e3;
@@ -491,4 +490,22 @@
   h1 {
     text-align: center;
   }
+}
+
+@media only screen and (min-width: 1366px) {
+  .Hero-model {
+    height: 453.1px;
+  }
+
+  .Arrow-right-up {
+    width: 144px;
+    padding: 1rem 1rem;
+  }
+
+  .SpecialSales {
+    & h1 {
+      margin-bottom: 2.5rem;
+    }
+  }
+
 }
